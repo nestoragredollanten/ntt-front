@@ -1,0 +1,142 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h5>Información básica</h5>
+    </div>
+    <div class="card-body">
+      <form #customerForm="ngForm">
+        <div class="row">
+          <!-- Document Type -->
+          <div class="col-md-6 mb-3">
+            <label for="documentType" class="form-label">Tipo de documento</label>
+            <input
+              id="documentType"
+              class="form-control"
+              [(ngModel)]="customer.documentType"
+              name="documentType"
+              disabled
+            >
+
+          </div>
+
+          <!-- Document Number -->
+          <div class="col-md-6 mb-3">
+            <label for="documentNumber" class="form-label">Número de documento</label>
+            <input
+              type="text"
+              id="documentNumber"
+              class="form-control"
+              [(ngModel)]="customer.documentNumber"
+              name="documentNumber"
+              disabled
+            />
+
+          </div>
+        </div>
+
+        <!-- Name Fields -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName" class="form-label">Primer nombre</label>
+            <input
+              type="text"
+              id="firstName"
+              class="form-control"
+              [(ngModel)]="customer.firstName"
+              name="firstName"
+              disabled
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="middleName" class="form-label">Segundo nombre</label>
+            <input
+              type="text"
+              id="middleName"
+              class="form-control"
+              [(ngModel)]="customer.middleName"
+              name="middleName"
+              disabled
+            />
+          </div>
+        </div>
+
+        <!-- Last Name Fields -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="lastName" class="form-label">Primer apellido</label>
+            <input
+              type="text"
+              id="lastName"
+              class="form-control"
+              [(ngModel)]="customer.lastName"
+              name="lastName"
+              disabled
+            />
+
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="secondLastName" class="form-label">Segundo apellido</label>
+            <input
+              type="text"
+              id="secondLastName"
+              class="form-control"
+              [(ngModel)]="customer.secondLastName"
+              name="secondLastName"
+              disabled
+            />
+          </div>
+        </div>
+
+        <!-- Phone and Address -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="phone" class="form-label">Teléfono</label>
+            <input
+              type="tel"
+              id="phone"
+              class="form-control"
+              [(ngModel)]="customer.phone"
+              name="phone"
+              disabled
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="address" class="form-label">Dirección</label>
+            <input
+              type="text"
+              id="address"
+              class="form-control"
+              [(ngModel)]="customer.address"
+              name="address"
+              disabled
+            />
+          </div>
+        </div>
+
+        <!-- City of Residence -->
+        <div class="mb-3">
+          <label for="cityOfResidence" class="form-label">Ciudad de residencia</label>
+          <input
+            type="text"
+            id="cityOfResidence"
+            class="form-control"
+            [(ngModel)]="customer.cityOfResidence"
+            name="cityOfResidence"
+            disabled
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+          (click)="goBack()"
+        >
+          Volver
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
